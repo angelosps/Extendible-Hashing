@@ -5,5 +5,5 @@ Implementation of [Extendible Hashing](https://en.wikipedia.org/wiki/Extendible_
 
 ## Authors
 * [Angelos Poulis](https://github.com/angelosps)
-* [Dimitrios Kyriakopoulos]()
+* [Dimitrios Kyriakopoulos](https://github.com/dimitrskpl)
 * [Dimitrios Rontogiannis](https://github.com/rondojim)
