@@ -1,6 +1,6 @@
 # 🗃️ Extendible Hashing 
 
-Implementation of [Extendible Hashing](https://en.wikipedia.org/wiki/Extendible_hashing) for both primary and secondary indexing in DBMS.
+Implementation of [Extendible Hashing](https://en.wikipedia.org/wiki/Extendible_hashing) for both primary and secondary indexing in database systems.
 
 
 ## Authors
