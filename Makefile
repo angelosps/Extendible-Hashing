@@ -17,9 +17,11 @@ secondary: $(S_OBJS)
 		gcc -L $(LIBRARY_PATH) -Wl,-rpath,$(LIBRARY_PATH) $(S_OBJS) -lbf -o $(S_OUT) -O2	
 
 ./build/primary_hash_main.o: ./src/primary_hash_main.c ./include/primary_hash_file.h
+		@mkdir -p build/bin
 		gcc -I $(INCLUDE_PATH) ./src/primary_hash_main.c -c -o $@
 
 ./build/secondary_hash_main.o: ./src/secondary_hash_main.c ./include/primary_hash_file.h ./include/secondary_hash_file.h
+		@mkdir -p build/bin
 		gcc -I $(INCLUDE_PATH) ./src/secondary_hash_main.c -c -o $@
 
 ./build/primary_hash_file.o: ./src/primary_hash_file.c ./include/primary_hash_file.h
