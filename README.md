@@ -22,13 +22,13 @@ ID | NAME      | SURNAME       | CITY
 <img src="./images/primary_eh.png" width = 600>
 
 ## Secondary Indexing Extendible Hashing
-**Secondary hashing is being made on the ID and the Surname keys.**
+**Note:** The secondary hashing is performed on the ID and Surname keys, as shown in the following screenshot.
 <img src="./images/secondary_eh.png">
 
 ## Usage
 A block level library named `BlockFile` is given for managing the memory.  
-**Warning!** The library is only compatible with linux machines, so you must be connected to a linux machine to run this repository.
-In order to run primary and/or secondary extendible hashing indexing just type on a terminal the following:
+**Warning!** The library is _only_ compatible with _linux_ machines, so you must be connected to a linux machine to run this repository.
+In order to run primary and/or secondary extendible hashing indexing just open a terminal in the current directory and do the following:
 
 ``` 
 $ make primary    # Compiles primary indexing
