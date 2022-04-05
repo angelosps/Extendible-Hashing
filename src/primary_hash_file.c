@@ -57,17 +57,17 @@ HT_ErrorCode HT_CreateIndex(const char *filename) {
         BF_Block_Init(&block);
         CALL_BF(BF_AllocateBlock(fileDesc, block));
         if (i == 1) { // initially we 'll have just two directories only in the first Directory Block
-        data = BF_Block_GetData(block);
-        directoryBlock dirBlock;
-        directory* directories = malloc(sizeof(directory) * NoOfDirsInBlock);
-        dirBlock.numOfDir = 2;
-        dirBlock.directories = directories;
-        for (int j = 0; j < 2; j++) {
-            dirBlock.directories[j].hashId = j; // hashID gia to kathe directory
-            dirBlock.directories[j].PosOfBucketBlock = K + j + 1;
-        }
-        memcpy(data, &dirBlock, sizeof(directoryBlock));
-        BF_Block_SetDirty(block); // Because we changed the data of the first block.
+            data = BF_Block_GetData(block);
+            directoryBlock dirBlock;
+            directory* directories = malloc(sizeof(directory) * NoOfDirsInBlock);
+            dirBlock.numOfDir = 2;
+            dirBlock.directories = directories;
+            for (int j = 0; j < 2; j++) {
+                dirBlock.directories[j].hashId = j; // hashID gia to kathe directory
+                dirBlock.directories[j].PosOfBucketBlock = K + j + 1;
+            }
+            memcpy(data, &dirBlock, sizeof(directoryBlock));
+            BF_Block_SetDirty(block); // Because we changed the data of the first block.
         }
         CALL_BF(BF_UnpinBlock(block));
     }
@@ -210,16 +210,16 @@ HT_ErrorCode HT_InsertEntry(int indexDesc, Record record, int * tupleId, UpdateR
                 memcpy(&curDirBlock, data, sizeof(directoryBlock));
 
                 if(curDirBlock.numOfDir < NoOfDirsInBlock) { // if directory fits in current dirBlock, then place it
-                curDirBlock.directories[curDirBlock.numOfDir].hashId = newDirectory.hashId;
-                curDirBlock.directories[curDirBlock.numOfDir++].PosOfBucketBlock = newDirectory.PosOfBucketBlock;
-                memcpy(data, &curDirBlock, sizeof(directoryBlock));
-                BF_Block_SetDirty(lastDirBlock);
-                d++; // directory written in memory, go to the next one
+                    curDirBlock.directories[curDirBlock.numOfDir].hashId = newDirectory.hashId;
+                    curDirBlock.directories[curDirBlock.numOfDir++].PosOfBucketBlock = newDirectory.PosOfBucketBlock;
+                    memcpy(data, &curDirBlock, sizeof(directoryBlock));
+                    BF_Block_SetDirty(lastDirBlock);
+                    d++; // directory written in memory, go to the next one
                 } else {   
                     lastDirBlockPos++;
                     if (lastDirBlockPos == K+1) { 
-                    perror("\nMemory limit reached.\n");
-                    return HT_ERROR;  
+                        perror("\nMemory limit reached.\n");
+                        return HT_ERROR;  
                     }
                     BF_Block *newBlock;
                     BF_Block_Init(&newBlock);
