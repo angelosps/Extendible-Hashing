@@ -22,7 +22,7 @@ ID | NAME      | SURNAME       | CITY
 <img src="./images/primary_eh.png" width = 600>
 
 ## Secondary Indexing Extendible Hashing
-**Note:** The secondary hashing is performed on the ID and Surname keys, as shown in the following screenshot.
+**Note:** The secondary hashing is performed on the Surname key, as shown in the following screenshot.
 <img src="./images/secondary_eh.png">
 
 ## Usage
