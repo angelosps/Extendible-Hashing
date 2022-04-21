@@ -1,6 +1,7 @@
 # 🗃️ Extendible Hashing 
 
-A block level implementation of [Extendible Hashing](https://en.wikipedia.org/wiki/Extendible_hashing) for both _primary_ and _secondary_ indexing in database systems. The implementation of SQL [Inner Join](https://en.wikipedia.org/wiki/Join_(SQL)#Inner_join) is also included.
+A block level implementation of [Extendible Hashing](https://en.wikipedia.org/wiki/Extendible_hashing) for both _primary_ and _secondary_ indexing in database systems.  
+Implementation of SQL [Inner Join](https://en.wikipedia.org/wiki/Join_(SQL)#Inner_join) is also included.
 
 ## A tiny database example 
 
