@@ -41,6 +41,9 @@ $ make clean
 ```
 
 ## Authors
-* [Angelos Poulis](https://github.com/angelosps)
-* [Dimitrios Kyriakopoulos](https://github.com/dimitrskpl)
-* [Dimitrios Rontogiannis](https://github.com/rondojim)
+* [Angelos Poulis](https://github.com/angelosps)<sup>*</sup>
+* [Dimitrios Kyriakopoulos](https://github.com/dimitrskpl)<sup>*</sup>
+* [Dimitrios Rontogiannis](https://github.com/rondojim)<sup>*</sup>
+
+<sup>*</sup>_Equal contribution._
+
